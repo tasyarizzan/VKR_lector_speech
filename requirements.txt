@@ -1,0 +1,7 @@
+librosa
+SpeechRecognition
+pyAudioAnalysis
+pandas
+openpyxl
+pydub
+
