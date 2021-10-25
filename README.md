@@ -1,3 +1,25 @@
+**EN**
+A desktop application for assessing the expressiveness of a lecturer's speech.
+Desctop app for assessing teacher's expressiveness.
+/ * A desktop application written in Python. The ability to analyze speech as from a microphone in real time. The estimated indicators of the expressiveness of speech and their dynamics: loudness, monotony, spatial impression (acoustics), tonal balance (ratio of high and low frequencies), silence / speech ratio, tempo, speech-to-noise ratio (sound transparency), noticeable interference and distortion.
+
+Possible solutions
+Interference and Distortion Visibility: Confidence score / number of words recognized.
+
+Pace: number of words / duration in minutes.
+
+Structure
+The audio_classification.py module analyzes audio recording for speech and non-speech. The voice2vec.py module describes the voice2VecModel class, which parses and displays the result of the analysis of the recording on the screen. It is also possible to get the results in the form of an excel file for further use and calculations. The Voice2VecModel class contains functions that receive parameters when the class is initialized. Each of the functions get_volume (), get_silent_sg (), get_monotone (), get_tempo (), get_otnosh (), get_tone_balance (), get_intfrnce_distn (), get_noise (), get_spat_imprsn () impression are returned (values: acoustics), mono balance (treble to bass ratio), treble to bass ratio, sound-to-sound ratio, noticeable interference and distortion.
+
+For the get_volume () functions, the thresholds for quiet and loud speech are configured (Figure 18) using attributes such as THRESHOLD_LW and THRESHOLD_LD. These attributes, in turn, depend on the local settings of the hardware (speaker and microphone).
+
+Rice. 18. Setting thresholds
+
+The logical function for classifying the language "speech - not speech" is_speech (), imported from the audio_classify.py module, includes what is analyzed and whether the audio file is speech. The input is the path of the audio file in the system.
+
+
+
+**RU**
 # Десктопное приложение для оценки показателей выразительности речи лектора.
 # Desctop app for evaluating expressiveness indicators of lecturer speech.
 
